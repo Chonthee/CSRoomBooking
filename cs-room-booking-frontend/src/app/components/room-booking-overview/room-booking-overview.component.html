@@ -1,0 +1,21 @@
+<div class="container-fluid p-2">
+    <!-- <div class="shadow-lg rounded border-2 border-zinc-200" id="modeManual"> -->
+    <div class="flex flex-col justify-center items-center">
+        <div class="shadow-xl rounded flew flex-col justify-center items-center text-center w-full border-2 border-zinc-200 p-1"
+            style="max-width: 1200px; min-width: 300px">
+            <h3 class="text-left font-sans font-bold text-lg text-gray-700 py-1">
+                SUMMARY
+            </h3>
+            <div class="text-left font-sans text-gray-700 text-xs pb-2">
+                <p> Click on date you want to book a room</p>
+                <p> You can reserve up to 12 days in advance.</p>
+            </div>
+
+            <div class="flex flex-wrap">
+                <app-date-detail *ngFor="let message of receiveMessage; let i = index" [freeHour]="message.freeHour"
+                    [date]="message.date" (click)="onSelectDate(i)" class="w-1/2 md:w-1/3 lg:w-1/4"></app-date-detail>
+            </div>
+        </div>
+    </div>
+</div>
+<app-selected-date *ngIf="showSelectedDate" [date]="selectedDate"></app-selected-date>

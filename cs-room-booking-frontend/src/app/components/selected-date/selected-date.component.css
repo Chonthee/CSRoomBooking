@@ -1,0 +1,18 @@
+.bg-success {
+    background-color: #5C8984;
+}
+.bg-warn {
+    background-color: #C38154;
+}
+.bg-danger {
+    background-color: #A86464;
+}
+
+.confirmation-dialog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-height: 90vh;
+  }
